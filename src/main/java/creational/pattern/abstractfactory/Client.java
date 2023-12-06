@@ -1,4 +1,4 @@
-package pattern.abstractfactory;
+package creational.pattern.abstractfactory;
 
 public class Client {
   private Service service;

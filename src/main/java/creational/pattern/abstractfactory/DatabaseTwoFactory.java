@@ -1,4 +1,4 @@
-package pattern.abstractfactory;
+package creational.pattern.abstractfactory;
 
 public class DatabaseTwoFactory implements DataSourceAbstractFactory{
 
