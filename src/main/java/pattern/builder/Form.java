@@ -1,27 +1,17 @@
-package builder;
+package pattern.builder;
 
 public class Form {
     private String name;
     private int age;
-    private enum gender = {
-            MALE("M"),
-        FEMALE("F"),
-        OTHERS("O")
-    };
-
-    private enum foodPreference ={
-            VEG("V"),
-        NONVEG("NV"),
-        NOFOOD("NOFOOD")
-    }
-
+    private int count;
     private boolean rsvp;
     private String city;
     private String area;
 
-    public Form(String name, int age, boolean rsvp, String city, String area) {
+    public Form(String name, int age, int count, boolean rsvp, String city, String area) {
         this.name = name;
         this.age = age;
+        this.count = count;
         this.rsvp = rsvp;
         this.city = city;
         this.area = area;
@@ -41,6 +31,14 @@ public class Form {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public boolean isRsvp() {
@@ -67,11 +65,12 @@ public class Form {
         this.area = area;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
-        return "Form{" +
+    @Override
+    public String toString() {
+        return "Form  {" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", count=" + count +
                 ", rsvp=" + rsvp +
                 ", city='" + city + '\'' +
                 ", area='" + area + '\'' +
